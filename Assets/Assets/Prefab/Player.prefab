@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2914128985144504053}
   - component: {fileID: 3553869663251941314}
   - component: {fileID: 647495735773403292}
+  - component: {fileID: 8914685135758989295}
   - component: {fileID: 5924538497076521101}
   m_Layer: 0
   m_Name: Player
@@ -105,6 +106,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   speed: 5
+--- !u!114 &8914685135758989295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287692616304491182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3265ee904c3aa02449293a63b77c3370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowData
+  RocketAmount: {fileID: 11400000, guid: f61925c66ddce68438fb6b91f06190a1, type: 2}
 --- !u!136 &5924538497076521101
 CapsuleCollider:
   m_ObjectHideFlags: 0

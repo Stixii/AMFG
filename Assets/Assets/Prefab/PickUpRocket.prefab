@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2139893068254126652}
   - component: {fileID: 294951896313572210}
   - component: {fileID: 6038980225339426435}
+  - component: {fileID: 5628684907448667907}
   m_Layer: 0
   m_Name: PickUpRocket
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3ba6ec9089b4d1141b77f63c4c37ba5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,3 +107,18 @@ MonoBehaviour:
   Object: {fileID: 5018672894041754946}
   Player: {fileID: 0}
   distance: 0
+--- !u!114 &5628684907448667907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037193053788518004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfeb41662dba4a4ab33a3929462992a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUP
+  detection: {fileID: 6038980225339426435}
+  RocketData: {fileID: 11400000, guid: f61925c66ddce68438fb6b91f06190a1, type: 2}
+  PickUp: {fileID: 7037193053788518004}

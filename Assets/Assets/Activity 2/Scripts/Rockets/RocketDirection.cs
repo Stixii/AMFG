@@ -36,7 +36,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             float angle = offset + (spacing * i);
 
-            GameObject Rocket = Instantiate(rocketPrefab, origin, Quaternion.identity);
+            GameObject Rocket = Instantiate(rocketPrefab, origin, Quaternion.Euler(0f,0f,angle));
             Rocket.GetComponent<RocketMovement>().Init(angle, origin, speed, RocketTime);
         }
     }

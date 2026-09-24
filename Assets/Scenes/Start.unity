@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 837536966}
   - component: {fileID: 837536965}
   m_Layer: 0
-  m_Name: Yuh hu
+  m_Name: Win Condition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,7 +688,7 @@ Transform:
   m_GameObject: {fileID: 837536960}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.42, y: 0, z: -2.49575}
+  m_LocalPosition: {x: -19.61, y: 0, z: -2.49575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -800,8 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd1a987164ac0d4c8bb731e82a3902a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinningPlatform
-  YuhUh: {fileID: 837536965}
-  Winner: {fileID: 1023578383}
+  detection: {fileID: 837536965}
+  WinnerText: {fileID: 1023578383}
 --- !u!1 &1023578383
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 1629336403}
   - component: {fileID: 1629336404}
   m_Layer: 0
-  m_Name: Nuh uh
+  m_Name: Lose Condition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1022,8 +1022,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8c9f678541010f43b7cd9438e6569b5, type: 2}
-  - {fileID: 2100000, guid: f8c9f678541010f43b7cd9438e6569b5, type: 2}
+  - {fileID: 2100000, guid: be1a01bb53b68184884fc99d0bf1c13c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1067,7 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fcf8180d80ac64385750123cdb068c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoGoZone
-  ruhroh: {fileID: 1629336404}
+  detection: {fileID: 1629336404}
   Platform: {fileID: 1629336399}
   Zone: {fileID: 1629336401}
   Colors:

@@ -3,23 +3,26 @@ using UnityEngine.UI;
 
 public class WinningPlatform : MonoBehaviour
 {
-    [SerializeField] Detection YuhUh;
-    [SerializeField] GameObject Winner;
+    //Before using the script assign these variables to narrow search time for specific functions
+    //easier visibility to see which script is connected to where and what its being used for
+    //Directly navigates developers to the component/function/script affected. <3
+    [SerializeField] Detection detection;
+    [SerializeField] GameObject WinnerText;
 
     // Update is called once per frame
     void Update()
     {
 
-        if (YuhUh.distance <= 5 )
+        if (detection.distance <= 5 )
         {   
-           Winner.SetActive(true);
+           WinnerText.SetActive(true);
            Debug.Log("Winning Platform");
         }
 
         else
         {
-            if (YuhUh.distance >=5)
-            Winner.SetActive(false);
+            if (detection.distance >=5)
+            WinnerText.SetActive(false);
         }
 
     }

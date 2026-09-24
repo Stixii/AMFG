@@ -3,6 +3,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     
+    //Basic movement using transform and old input system 
+
     public float speed = 5f;
     // Update is called once per frame
     void Update()

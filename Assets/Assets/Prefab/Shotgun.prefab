@@ -275,6 +275,8 @@ GameObject:
   - component: {fileID: 3599385042767261028}
   - component: {fileID: 2725112638550253354}
   - component: {fileID: 307583059600496840}
+  - component: {fileID: 6979693947268816448}
+  - component: {fileID: 355471597430105763}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -376,6 +378,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6979693947268816448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012864390464213050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62f76a4a0dc42a4c9d90de4ddcbf9d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shotgun
+  detection: {fileID: 355471597430105763}
+  turret: {fileID: 11400000, guid: b1974db79f4acd749a12b7c602920fef, type: 2}
+  bulletPrefab: {fileID: 6890902654663290732, guid: 951f40ee51959d14985aeb585e5815ef, type: 3}
+  player: {fileID: 0}
+  spreadAngle: 10
+  bulletAmount: 6
+  shootingPoint: {fileID: 2629687571075970742}
+--- !u!114 &355471597430105763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012864390464213050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260c500294ab1844686698fb6ffb3551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Detection
+  Object: {fileID: 4502199383306609259}
+  Player: {fileID: 0}
+  distance: 0
 --- !u!1 &8178270364361224887
 GameObject:
   m_ObjectHideFlags: 0

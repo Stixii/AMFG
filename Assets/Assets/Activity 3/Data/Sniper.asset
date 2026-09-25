@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   range: 20
-  attackRate: 5
-  bulletSpeed: 10
+  attackRate: 0.9772366
+  bulletSpeed: 20
   lifeTime: 2

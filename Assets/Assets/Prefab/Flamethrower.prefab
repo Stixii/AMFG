@@ -633,7 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Flamethrower
   detection: {fileID: 8370133919644153318}
   turret: {fileID: 11400000, guid: a919541e551aae846bdf1be4771a0106, type: 2}
-  bulletPrefab: {fileID: 0}
-  bulletMove: {fileID: 0}
+  bulletPrefab: {fileID: 6890902654663290732, guid: 951f40ee51959d14985aeb585e5815ef, type: 3}
+  player: {fileID: 0}
   spreadAngle: 10
   shootingPoint: {fileID: 1066380695727459050}

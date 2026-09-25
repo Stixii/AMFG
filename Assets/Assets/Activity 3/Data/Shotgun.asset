@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc96453c584233847a24de04dec0903f, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
-  range: 13
-  attackRate: 3
+  range: 15
+  attackRate: 0.036324218
   bulletSpeed: 3
-  lifeTime: 2
+  lifeTime: 5

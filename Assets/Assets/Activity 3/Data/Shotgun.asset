@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   range: 13
-  attackSpeed: 4
+  attackRate: 3
   bulletSpeed: 3
+  lifeTime: 2

@@ -8,6 +8,7 @@ public class TurretData : ScriptableObject
     [SerializeField] private float range;
     [SerializeField] private float attackRate;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float lifeTime;
 
 
     public float Range 
@@ -28,6 +29,10 @@ public class TurretData : ScriptableObject
         set => bulletSpeed = value;
     }
 
-
+    public float Lifetime
+    {
+        get => lifeTime;
+        set => lifeTime = value;
+    }
 
 }

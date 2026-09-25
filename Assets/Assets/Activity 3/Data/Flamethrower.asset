@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Flamethrower
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   range: 15
-  attackSpeed: 0.3
+  attackRate: 0
   bulletSpeed: 3
+  lifeTime: 5

@@ -2,12 +2,12 @@ using System;
 
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class RocketDirection : MonoBehaviour
 {
     [SerializeField] GameObject rocketPrefab;
     [SerializeField] Transform player;
 
-
+    [Header("Data")]
     [SerializeField] float speed = 5f;
     [SerializeField] float RocketTime = 5f;
     [SerializeField] float Timer = 3f;
@@ -30,7 +30,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Vector3 origin = player.position;
 
         float spacing = 360f / rocketAmount.rocketAmount;
-        float offset = spacing / 2f;
+        float offset = spacing / 1f;
 
         for (int i = 0; i <rocketAmount.rocketAmount; i++)
         {
@@ -40,8 +40,4 @@ public class NewMonoBehaviourScript : MonoBehaviour
             Rocket.GetComponent<RocketMovement>().Init(angle, origin, speed, RocketTime);
         }
     }
-
-
-
-
 }

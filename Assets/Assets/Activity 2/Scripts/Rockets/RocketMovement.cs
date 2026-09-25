@@ -5,9 +5,11 @@ public class RocketMovement : MonoBehaviour
     Vector3 spawnPoint;
     Vector3 direction;
     float speed;
+    
     float lifetime;
     float timer;
 
+    //Gets the values from the game object spawning the prefab
     public void Init(float angleDegrees, Vector3 origin, float rocketSpeed, float rocketLifetime)
     {
         spawnPoint = origin;
@@ -16,10 +18,14 @@ public class RocketMovement : MonoBehaviour
         lifetime = rocketLifetime;
         timer = 0f;
 
+
+        //Spawns the  rockets on the X and Y axis and shoots them out
         float rad = angleDegrees * Mathf.Deg2Rad;
-        direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0f);
+        direction = new Vector3(Mathf.Cos(rad), 0f, Mathf.Sin(rad));
     }
 
+
+    //Lifetime of gameobject till it gets destoryed
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;

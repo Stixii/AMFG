@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 
 
-[CreateAssetMenu(fileName = "Rockets", menuName = "PlayerData/Rockets")]
+[CreateAssetMenu(fileName = "Rockets", menuName = "Data/Rockets")]
 public class RocketAmountData : ScriptableObject
 {
    [SerializeField] private int RocketAmount;

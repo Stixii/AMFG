@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Detection : MonoBehaviour
@@ -6,7 +7,7 @@ public class Detection : MonoBehaviour
 
     //Detection for player and target
 
-   [SerializeField] Transform Target;
+   [SerializeField] Transform Object;
    
    [SerializeField] Transform Player;
 
@@ -15,7 +16,7 @@ public class Detection : MonoBehaviour
    //Updates the distance and shows it in the logs
     void Update()
     {
-        distance =  Vector3.Distance(Target.position, Player.position);
+        distance =  Vector3.Distance(Object.position, Player.position);
         Debug.Log(distance); 
     }
 }

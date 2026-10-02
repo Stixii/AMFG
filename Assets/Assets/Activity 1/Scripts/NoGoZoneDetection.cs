@@ -44,7 +44,7 @@ public class NoGoZoneDetection : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 3f)
             {
-                SceneManager.LoadScene("Start");
+                SceneManager.LoadScene("Activity-1");
             }
         }
 

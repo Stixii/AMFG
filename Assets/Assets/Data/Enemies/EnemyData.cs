@@ -1,9 +1,9 @@
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "EnemyType", menuName = "Data/EnemyType")]
+[CreateAssetMenu(fileName = "EnemyData", menuName = "Data/EnemyData")]
 
-public class EnemyType : ScriptableObject
+public class EnemyData : ScriptableObject
 {
     [SerializeField] GameObject enemyPrefab;
     

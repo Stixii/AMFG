@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc96453c584233847a24de04dec0903f, type: 3}
-  m_Name: Shotgun
+  m_Name: Sniper
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
-  range: 15
-  attackRate: 0.036324218
-  bulletSpeed: 3
-  lifeTime: 5
+  range: 20
+  attackRate: 4
+  bulletSpeed: 20
+  lifeTime: 2

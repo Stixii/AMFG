@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyPathing : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     
     

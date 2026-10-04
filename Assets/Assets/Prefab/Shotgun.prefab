@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679351209478144651}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.7573075, y: 0.03744927, z: -0.0027742519}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.04, y: 0.04, z: 0.56}
   m_LocalScale: {x: 0.36947167, y: 0.36947167, z: 0.3694716}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4502199383306609259}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &3250772987838995197
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -396,6 +396,7 @@ MonoBehaviour:
   player: {fileID: 0}
   spreadAngle: 10
   bulletAmount: 6
+  turretOrientation: {fileID: 4502199383306609259}
   shootingPoint: {fileID: 2629687571075970742}
 --- !u!114 &355471597430105763
 MonoBehaviour:
@@ -542,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9116544915278717641
 Transform:
   m_ObjectHideFlags: 0
@@ -553,7 +554,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.40699998, z: 0}
-  m_LocalScale: {x: 13, y: 0.2, z: 13}
+  m_LocalScale: {x: 20, y: 0.2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 414576042816367313}

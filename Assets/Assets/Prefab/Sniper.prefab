@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393204644961184407}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.7573075, y: 0.03744927, z: -0.0027739212}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.01, y: 0.04, z: 0.73}
   m_LocalScale: {x: 0.36947167, y: 0.36947167, z: 0.3694716}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3218686808891784483}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &6202628634410013926
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2579664002476835462
 Transform:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.40700045, z: 0}
-  m_LocalScale: {x: 20, y: 0.2, z: 20}
+  m_LocalScale: {x: 30, y: 0.2, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 610784489285037341}
@@ -506,6 +506,7 @@ MonoBehaviour:
   turret: {fileID: 11400000, guid: 67e87416c394157439b031adc1b0690a, type: 2}
   bulletPrefab: {fileID: 6890902654663290732, guid: 951f40ee51959d14985aeb585e5815ef, type: 3}
   player: {fileID: 0}
+  turretOrientation: {fileID: 3218686808891784483}
   shootingPoint: {fileID: 6982284324537007699}
 --- !u!114 &5878777837642023663
 MonoBehaviour:

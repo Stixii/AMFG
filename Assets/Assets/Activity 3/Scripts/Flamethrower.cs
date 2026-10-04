@@ -13,10 +13,25 @@ public class Flamethrower : MonoBehaviour
    [SerializeField] Transform shootingPoint;
 
 
+    //Isolating access from a singular object
+    private float range;
+    private float attackRate;
+    private float bulletSpeed;
+    private float lifetime;
+
+    void Start()
+    {
+        range = turret.Range;
+        attackRate = turret.AttackRate;
+        bulletSpeed = turret.BulletSpeed;
+        lifetime = turret.Lifetime;
+    }
+
+
     //Firerate  and checks when to fire
     void Update()
     {   
-        if (detection.distance <= turret.Range)
+        if (detection.distance <= range)
         {   
              //setting aim direction as a local variable
             Vector3 aimDirection = (player.position - shootingPoint.position).normalized;
@@ -24,12 +39,12 @@ public class Flamethrower : MonoBehaviour
 
             turretOrientation.rotation = Quaternion.LookRotation(aimDirection, Vector3.up);
 
-            turret.AttackRate += Time.deltaTime * 3f;
-            float fireInterval = 1f / turret.AttackRate;
-            while (turret.AttackRate >= fireInterval)
+            attackRate += Time.deltaTime * 3f;
+            float fireInterval = 1f / attackRate;
+            while (attackRate >= fireInterval)
             {
                 FlamethowerShoot();
-                turret.AttackRate -= fireInterval;
+                attackRate -= fireInterval;
             }
         }
     } 
@@ -47,6 +62,6 @@ public class Flamethrower : MonoBehaviour
 
         //Creates the prefab and moves towards the player
         GameObject bullet = Instantiate(bulletPrefab, origin, Quaternion.identity);
-        bullet.GetComponent<BulletMove>().Init(angle, origin, turret.BulletSpeed, turret.Lifetime);
+        bullet.GetComponent<BulletMove>().Init(angle, origin, bulletSpeed, lifetime);
     }
 }

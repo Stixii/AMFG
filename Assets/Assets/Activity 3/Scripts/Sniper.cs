@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Sniper : MonoBehaviour
 {
-    [SerializeField] Detection detection;
+[SerializeField] Detection detection;
    [SerializeField] TurretData turret;
    [SerializeField] GameObject bulletPrefab;
    [SerializeField] Transform player;
+   [SerializeField] Transform turretOrientation;
    //[SerializeField] float spreadAngle = 10f;
    
    [SerializeField] Transform shootingPoint;
@@ -15,7 +16,14 @@ public class Sniper : MonoBehaviour
     void Update()
     {   
         if (detection.distance <= turret.Range)
-        {
+        {   
+            //setting aim direction as a local variable
+            Vector3 aimDirection = (player.position - shootingPoint.position).normalized;
+            aimDirection.y = 0f;
+
+            turretOrientation.rotation = Quaternion.LookRotation(aimDirection, Vector3.up);
+
+
             turret.AttackRate += Time.deltaTime;
             float fireInterval = 1f / turret.AttackRate;
             while (turret.AttackRate >= fireInterval)

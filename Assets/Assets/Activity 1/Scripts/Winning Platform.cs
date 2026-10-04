@@ -13,7 +13,7 @@ public class WinningPlatform : MonoBehaviour
     void Update()
     {
 
-        if (detection.distance <= 5 )
+        if (detection.distance <= 2 )
         {   
            WinnerText.SetActive(true);
            Debug.Log("Winning Platform");
@@ -21,7 +21,7 @@ public class WinningPlatform : MonoBehaviour
 
         else
         {
-            if (detection.distance >=5)
+            if (detection.distance >=2)
             WinnerText.SetActive(false);
         }
 

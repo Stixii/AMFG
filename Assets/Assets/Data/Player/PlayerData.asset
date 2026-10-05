@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc96453c584233847a24de04dec0903f, type: 3}
-  m_Name: Sniper
-  m_EditorClassIdentifier: Assembly-CSharp::TurretData
-  range: 20
-  attackRate: 1
-  bulletSpeed: 20
-  lifeTime: 2
+  m_Script: {fileID: 11500000, guid: 7b1e53d3f85bf1947afd1c101f16f00b, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  maxHealth: 20
+  currentHealth: 20
+  coins: 100

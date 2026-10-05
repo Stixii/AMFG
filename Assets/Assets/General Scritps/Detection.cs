@@ -17,6 +17,6 @@ public class Detection : MonoBehaviour
     void Update()
     {
         distance =  Vector3.Distance(Object.position, Player.position);
-        Debug.Log(distance); 
+        //Debug.Log(distance); 
     }
 }

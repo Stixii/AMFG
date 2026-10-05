@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,6 +11,7 @@ public class EnemyData : ScriptableObject
     
     [SerializeField] int health;
     [SerializeField] float speed;
+    [SerializeField] int damage;  
 
 
 
@@ -22,6 +25,12 @@ public class EnemyData : ScriptableObject
     {
         get => health;
         set => health = value;
+    }
+
+    public int Damage
+    {
+        get => damage;
+        set => damage = value;
     }
     
     public float Speed

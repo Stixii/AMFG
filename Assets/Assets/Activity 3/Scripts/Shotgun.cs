@@ -20,12 +20,16 @@ public class Shotgun : MonoBehaviour
     private float attackRate;
     private float bulletSpeed;
     private float lifetime;
+    private float fireInterval;
+    private float nextShotTime;
+
     void Start()
     {
         range = turret.Range;
         attackRate = turret.AttackRate;
         bulletSpeed = turret.BulletSpeed;
         lifetime = turret.Lifetime;
+        fireInterval = 1f / attackRate;
     }
 
 
@@ -41,12 +45,10 @@ public class Shotgun : MonoBehaviour
 
             turretOrientation.rotation = Quaternion.LookRotation(aimDirection, Vector3.up);
 
-            attackRate += Time.deltaTime;
-            float fireInterval = 1f / attackRate;
-            while (attackRate >= fireInterval)
+            if (Time.time >= nextShotTime)
             {
                 ShotgunShot();
-                attackRate -= fireInterval;
+                nextShotTime = Time.time + fireInterval;
             }
         }
     } 

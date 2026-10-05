@@ -1697,6 +1697,7 @@ MonoBehaviour:
   backgroundHealthBarSprite: {fileID: 1773400105}
   healthBarSprite: {fileID: 1307324601}
   ghostHealthBarSprite: {fileID: 2032608208}
+  ghostFollowSpeed: 2
 --- !u!4 &1618521575
 Transform:
   m_ObjectHideFlags: 0
@@ -2418,7 +2419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2577533492907937036, guid: 5c7e80e49675fc141ad06ca93906e78c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5056002858575102971, guid: 5c7e80e49675fc141ad06ca93906e78c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2527,7 +2528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2934012877169161557, guid: 5a6fea70f2c783d43bc5f4a3f80f17dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6979693947268816448, guid: 5a6fea70f2c783d43bc5f4a3f80f17dc, type: 3}
       propertyPath: player
@@ -2600,7 +2601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4923445566480210485, guid: 5e623d0c032adb44288eff89adb7d8b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5878777837642023663, guid: 5e623d0c032adb44288eff89adb7d8b6, type: 3}
       propertyPath: Player

@@ -16,3 +16,4 @@ MonoBehaviour:
   attackRate: 0.8
   bulletSpeed: 3
   lifeTime: 5
+  turretDamage: 1

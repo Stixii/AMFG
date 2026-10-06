@@ -9,6 +9,10 @@ public class BulletMove : MonoBehaviour
     float speed;
     float lifetime;
     float timer;
+    float turretDamage;
+    Enemy enemy;
+    [SerializeField] Detection detection;
+    [SerializeField] GameObject bulletPrefab;
 
     //Initializes the bullet speed 
     void Awake()
@@ -25,7 +29,7 @@ public class BulletMove : MonoBehaviour
         speed = rocketSpeed;
         lifetime = rocketLifetime;
         timer = 0f;
-
+        turretDamage = turret.TurretDamage;
 
         //Spawns the  rockets on the X and Y axis and shoots them out
         float rad = angleDegrees * Mathf.Deg2Rad;
@@ -35,12 +39,29 @@ public class BulletMove : MonoBehaviour
     //lifetime of a bullet
     void Update()
     {
+        DamageEnemy();
         transform.position += direction * speed * Time.deltaTime;
 
         timer += Time.deltaTime;
         if (timer >= lifetime)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void DamageEnemy()
+    {
+        if (detection.distance > .5)
+        {
+            if (gameObject.GetComponent<Enemy>() != null)
+            {
+                enemy.health -= turretDamage;
+                    if (enemy.health < 0f)
+                {
+                    Destroy(gameObject.GetComponent<Enemy>());
+                }
+
+            }
         }
 
     }

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -28,4 +29,11 @@ public class Movement : MonoBehaviour
             transform.position += transform.right * Time.deltaTime * 5f;
         }
     }
+
+    void OnDestroy()
+    {
+        Destroy(gameObject);
+    }
+
+
 }

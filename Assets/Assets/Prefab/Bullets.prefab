@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3692854875687238934}
   - component: {fileID: 8268131159401408492}
   - component: {fileID: 494389865773457740}
+  - component: {fileID: 316235527426207660}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: Untagged
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ee6e647370705469076bc79692d1cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletMove
-  turret: {fileID: 11400000, guid: a919541e551aae846bdf1be4771a0106, type: 2}
+  turret: {fileID: 11400000, guid: 27b74a6e377a98546bedc5db250717b5, type: 2}
   detection: {fileID: 494389865773457740}
   bulletPrefab: {fileID: 6890902654663290732}
 --- !u!114 &494389865773457740
@@ -122,3 +123,17 @@ MonoBehaviour:
   Object: {fileID: 6875202470801479896}
   Player: {fileID: 1543959156887356186, guid: 117478e701518ea4c99b7cae11386885, type: 3}
   distance: 0
+--- !u!114 &316235527426207660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6890902654663290732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e034609846092ee49a287b1f6641a6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletDamage
+  detection: {fileID: 494389865773457740}
+  turret: {fileID: 11400000, guid: 27b74a6e377a98546bedc5db250717b5, type: 2}

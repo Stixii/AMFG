@@ -9,6 +9,9 @@ public class Health : MonoBehaviour
     [SerializeField] Image ghostHealthBarSprite;
     [SerializeField] float ghostFollowSpeed = 2f;
 
+
+    [SerializeField] GameObject Lose;
+
     private float maxHealth;
     private float currentHealth;
 
@@ -43,6 +46,11 @@ public class Health : MonoBehaviour
             ghostFollowSpeed * Time.deltaTime);
     }
 
+   
+
+
+
+    //Button for debugging HP
     public void TakeDamage()
     {
         currentHealth = Mathf.Max(0f, currentHealth - 1f);
@@ -52,6 +60,8 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("You lost");
+            Lose.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

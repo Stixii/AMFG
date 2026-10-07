@@ -15,7 +15,7 @@ public class Pathing : MonoBehaviour
         speed = enemyData.Speed;
     }
 
-
+    //Beizer curve pathing 
     void Update()
     {
         if (pathPoints == null || pathPoints.Length < 4 || enemyPosition == null)

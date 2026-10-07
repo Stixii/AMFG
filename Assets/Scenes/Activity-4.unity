@@ -209,6 +209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd15be64fe47d284eb48fa7f6edbe1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  data: {fileID: 11400000, guid: 1715ad110492d284f93f9eb57f0a5b56, type: 2}
+  health: 0
+  speed: 0
+  damage: 0
 --- !u!1 &198801119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,7 +1479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d16873606baa04cb8bc7d6f864acc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinSpawn
-  enemy: {fileID: 0}
   coinPrefab: {fileID: 0}
 --- !u!114 &1257427567
 MonoBehaviour:
@@ -1761,6 +1764,7 @@ MonoBehaviour:
   healthBarSprite: {fileID: 1307324601}
   ghostHealthBarSprite: {fileID: 2032608208}
   ghostFollowSpeed: 2
+  Lose: {fileID: 198801119}
 --- !u!4 &1618521575
 Transform:
   m_ObjectHideFlags: 0

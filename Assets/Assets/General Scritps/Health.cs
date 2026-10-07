@@ -4,16 +4,18 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     [SerializeField] PlayerData data;
+    [SerializeField] Detection detection;
     [SerializeField] Image backgroundHealthBarSprite;
     [SerializeField] Image healthBarSprite;
     [SerializeField] Image ghostHealthBarSprite;
     [SerializeField] float ghostFollowSpeed = 2f;
+    private bool hasDamaged = false;
 
 
     [SerializeField] GameObject Lose;
 
     private float maxHealth;
-    private float currentHealth;
+    public float currentHealth;
 
     void Start()
     {
@@ -24,10 +26,26 @@ public class Health : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+
+        //Prevents multiple damage instance
+        if (detection.distance <= 1f && !hasDamaged)
+        {
+        TakeDamage();
+        hasDamaged = true;
+        }
+        
+        if (detection.distance > 1f)
+        {
+        hasDamaged = false;
+        }
+
+
         HealthBarUpdate(maxHealth, currentHealth);
         GhostHealthBarUpdate();
     }
+
+    
 
     //Actual HP
     public void HealthBarUpdate(float maxHealth, float currentHealth)

@@ -5,8 +5,9 @@ public class Missle : MonoBehaviour
     
     [SerializeField] private GameObject missle;
     [SerializeField] private Transform target;
+    [SerializeField] private Detection detection;
     private int lifetime = 5;
-    private int damage = 1;
+    //private int damage = 1;
     private float turnSpeed = 5f;
     private float speed = 1f;
 
@@ -29,6 +30,11 @@ public class Missle : MonoBehaviour
 
         //move the bullet forward
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        if (detection.distance <= 0)
+        {
+            
+        }
 
         if (lifetime - Time.deltaTime > lifetime)
         {

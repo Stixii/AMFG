@@ -7,7 +7,7 @@ public class WinningPlatform : MonoBehaviour
     //easier visibility to see which script is connected to where and what its being used for
     //Directly navigates developers to the component/function/script affected. <3
     [SerializeField] Detection detection;
-    [SerializeField] GameObject WinnerText;
+    //[SerializeField] GameObject WinnerText;
 
     // Update is called once per frame
     void Update()
@@ -15,14 +15,14 @@ public class WinningPlatform : MonoBehaviour
 
         if (detection.distance <= 2 )
         {   
-           WinnerText.SetActive(true);
-           Debug.Log("Winning Platform");
+           //WinnerText.SetActive(true);
+           //Debug.Log("Winning Platform");
         }
 
         else
         {
-            if (detection.distance >=2)
-            WinnerText.SetActive(false);
+            //if (detection.distance >=2)
+            //WinnerText.SetActive(false);
         }
 
     }

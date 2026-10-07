@@ -55,8 +55,8 @@ public class BulletMove : MonoBehaviour
         {
             if (gameObject.GetComponent<Enemy>() != null)
             {
-                enemy.health -= turretDamage;
-                    if (enemy.health < 0f)
+                enemy.enemyHealth -= turretDamage;
+                    if (enemy.enemyHealth < 0f)
                 {
                     Destroy(gameObject.GetComponent<Enemy>());
                 }

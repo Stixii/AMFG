@@ -4,26 +4,22 @@ public class BulletDamage : MonoBehaviour
 {
     
     [SerializeField] Detection detection;
-    [SerializeField] TurretData turret;
-    [SerializeField] EnemyData enemyData;
-    float Damage = 0f;
+    [SerializeField] Enemy enemy;
 
-    float enemyHealth;
-    
-
-    void Start()
-    {
-        Damage = turret.TurretDamage;
-        enemyHealth = enemyData.Health;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (detection.distance <= .5)
+        if (detection.distance <= .5f)
         {
-            enemyHealth = enemyHealth - Damage;
-            Debug.Log("Enemy took damage");
+            DamageEnemy();
+        }
+    }
+
+    public void DamageEnemy()
+    {
+        enemy.enemyHealth -= 1;
+        if (enemy.enemyHealth <= 0f)
+        {
+            Destroy(enemy.gameObject);
         }
     }
 }

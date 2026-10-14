@@ -38,7 +38,7 @@ public class BulletMove : MonoBehaviour
     //lifetime of a bullet
     void Update()
     {
-        DamageEnemy();
+        //DamageEnemy();
         transform.position += direction * speed * Time.deltaTime;
 
         timer += Time.deltaTime;
@@ -48,20 +48,20 @@ public class BulletMove : MonoBehaviour
         }
     }
 
-    private void DamageEnemy()
-    {
-        if (detection.distance > .5)
-        {
-            if (gameObject.GetComponent<Enemy>() != null)
-            {
-                enemy.enemyHealth -= turretDamage;
-                    if (enemy.enemyHealth < 0f)
-                {
-                    Destroy(gameObject.GetComponent<Enemy>());
-                }
+    // private void DamageEnemy()
+    // {
+    //     if (detection.distance > .5)
+    //     {
+    //         if (enemy.gameObject != null)
+    //         {
+    //             enemy.enemyHealth -= turretDamage;
+    //                 if (enemy.enemyHealth < 0f)
+    //             {
+    //                 Destroy(enemy.gameObject);
+    //             }
 
-            }
-        }
+    //         }
+    //     }
 
-    }
+    // }
 }

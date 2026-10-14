@@ -4,7 +4,6 @@ public class Pathing : MonoBehaviour
 {
     
     [SerializeField] Transform[] pathPoints;
-    [SerializeField] Enemy enemy;
     [SerializeField] Transform enemyPosition;
     [SerializeField] EnemyData enemyData;
 

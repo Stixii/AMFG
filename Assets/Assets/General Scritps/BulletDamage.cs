@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletDamage : MonoBehaviour
@@ -7,16 +5,16 @@ public class BulletDamage : MonoBehaviour
     
     [SerializeField] Detection detection;
     [SerializeField] TurretData turret;
-
+    [SerializeField] EnemyData enemyData;
     float Damage = 0f;
 
     float enemyHealth;
-    Enemy enemyScript;
+    
 
     void Start()
     {
         Damage = turret.TurretDamage;
-        enemyHealth = enemyScript.enemyHealth;
+        enemyHealth = enemyData.Health;
     }
 
     // Update is called once per frame
@@ -24,7 +22,7 @@ public class BulletDamage : MonoBehaviour
     {
         if (detection.distance <= .5)
         {
-            enemyHealth = enemyHealth - Damage ;
+            enemyHealth = enemyHealth - Damage;
             Debug.Log("Enemy took damage");
         }
     }

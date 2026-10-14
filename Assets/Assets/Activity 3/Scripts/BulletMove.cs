@@ -12,7 +12,6 @@ public class BulletMove : MonoBehaviour
     float turretDamage;
     Enemy enemy;
     [SerializeField] Detection detection;
-    [SerializeField] GameObject bulletPrefab;
 
     //Initializes the bullet speed 
     void Awake()

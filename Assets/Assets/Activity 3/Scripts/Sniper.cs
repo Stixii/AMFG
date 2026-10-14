@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Sniper : MonoBehaviour
 {
-[SerializeField] Detection detection;
+    [SerializeField] Detection detection;
    [SerializeField] TurretData turret;
    [SerializeField] GameObject bulletPrefab;
    [SerializeField] Transform player;

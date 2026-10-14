@@ -21,9 +21,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {   
         //Damage Health when it reaches goal
-        if (detection.distance <= 0)
+        if (detection.distance <= .5)
         {
-            healthManager.currentHealth = healthManager.currentHealth - enemyDamage;
+            //healthManager.currentHealth = healthManager.currentHealth - enemyDamage;
+            Debug.Log("!!!!!!!!!!!!!!!!!!!");
         }
 
         //Destroy gameobject if ITS health reaches 0
